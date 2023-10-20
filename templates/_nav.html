@@ -1,0 +1,98 @@
+ <header class="header" data-header>
+    <div class="container">
+
+      <div class="overlay" data-overlay></div>
+
+      <a href="#" class="logo">
+        <img src="{{ url_for('static', filename = 'images/logo.png') }}" width="160" height="50" alt="Loge">
+      </a>
+
+      <button class="nav-open-btn" data-nav-open-btn aria-label="Open Menu">
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+
+      <nav class="navbar" data-navbar>
+
+        <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+
+        <a href="#" class="logo">
+          <img src="{{ url_for('static', filename = 'images/logo.png') }}" width="190" height="50" alt="logo">
+        </a>
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link">Home</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link">About</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link">Products</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link">Shop</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link">Blog</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link">Contact</a>
+          </li>
+
+        </ul>
+
+
+        <ul class="nav-action-list">
+
+          <li>
+            <button class="nav-action-btn">
+              <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+
+              <span class="nav-action-text">Search</span>
+            </button>
+          </li>
+<!--menu burg -->
+
+          <li>
+            <a href="#" class="nav-action-btn">
+              <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+
+              <span class="nav-action-text">Login / Register</span>
+            </a>
+          </li>
+<!--menu burg -->
+
+          <li>
+            <button class="nav-action-btn">
+              <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+
+              <span class="nav-action-text">Wishlist</span>
+
+              <data class="nav-action-badge" value="5" aria-hidden="true">5</data>
+            </button>
+          </li>
+<!--menu burg -->
+          <li>
+            <button class="nav-action-btn">
+              <ion-icon name="bag-outline" aria-hidden="true"></ion-icon>
+
+              <data class="nav-action-text" value="28 000€">Basket: <strong>28 000€</strong></data>
+
+              <data class="nav-action-badge" value="1" aria-hidden="true">4</data>
+            </button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+  </header>

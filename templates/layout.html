@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+        <title>layout</title>
+    {% endblock %}
+{#    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">#}
+    {% block stylesheets %}
+        <link rel="stylesheet" href="../static/style/style.css">
+    {% endblock %}
+</head>
+<body>
+{% include('_nav.html') %}
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% for categorie, message in messages %}
+            <div role="alert" class="alert {{ categorie }}">
+                Information : <strong>{{ message }}</strong>
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+{% block body %}
+    <h2 style="color:blue">layout.html</h2>
+{% endblock %}
+
+{% include('_nav.html') %}
+
+{% block javascripts %}
+{% endblock %}
+</body>
+</html>

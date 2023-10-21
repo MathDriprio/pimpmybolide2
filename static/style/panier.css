@@ -134,6 +134,10 @@ input {
 .cancel {
     color: black;
 }
+.image img{
+    width: 200px;
+    height: auto;
+}
 
 .button-checkout:hover {
     color: black;
@@ -150,10 +154,42 @@ input {
     color: #CB4335;
 }
 
+@media (max-width:480px) {
+    .Vcommande{
+        margin-right:10%;
+        margin-left:10%;
+    }
+    section>h1 {
+        font-size: 40px;
+        text-align: center;
+        margin: 0;
+    }
+    .row{
+        display:block;
+        margin-right: 3%;
+        margin-left: 3%;
+    }
+    .row>.column {
+        width: 100%;
+    }
+    
+    .row>.column2 {
+        width: 100%;
+    }
+    .row1{
+        margin:0px;
+    }
+    .secondary-nav{
+        float: left;
+    }
+    .image img{
+        width: 75px;
+        height: auto;
+    }
+    
+}
 
-
-
-
+/* partie quand on valide */
 .Vcommande {
     margin-top: 10%;
     margin-left: 30%;
@@ -178,33 +214,5 @@ input {
     text-align: center;
 }
 
-@media (max-width:480px) {
-    .Vcommande{
-        margin-right:10%;
-        margin-left:10%;
-    }
-    section>h1 {
-        font-size: 40px;
-        text-align: center;
-    }
-    .row{
-        display:block;
-        margin-right: 3%;
-        margin-left: 3%;
-    }
-    .row>.column {
-        width: 100%;
-    }
-    
-    .row>.column2 {
-        width: 100%;
-    }
-    .row1{
-        margin:0px;
-    }
-    .secondary-nav{
-        float: left;
-    }
-    
-}
+
 

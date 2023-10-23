@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" type="image/x-icon" href="../static/image/miniLogo.jpeg" />
+    <link rel="shortcut icon" type="image/x-icon" href="../logo/miniLogo.jpeg" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>PimpMyBolide</title>
-    <link rel="stylesheet" href="../static/style/panier.css" />
+    <link rel="stylesheet" href="../css/panier.css" />
     
     <link
       href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"
@@ -19,7 +19,7 @@
       <nav>
         <ul>
           <li class="primary-nav">
-            <img src="../static/image/grosLogo.png" alt="logo" width=100% height=10% />
+            <img src="../logo/grosLogo.png" alt="logo" width=100% height=10% />
           </li>
           <li class="secondary-nav">
             <a href="lien a mettre">
@@ -40,12 +40,10 @@
           <h1>Votre commande</h1>
           <h5>Veuillez sélectionner la quantité</h5>
           <div class="cart-item" id="item">
-            <div class="image">
-              <img src="../static/image/photo_voiture/3-face.jpg" alt="" />
-            </div>
-            <p>Mercedes G63</p>
-            <p>89 900 €</p>
-            <input
+            <img class="presentation" src="../Photo_Voiture/3-face.jpg" alt="" />
+            <p class="nom">Mercedes G63</p>
+            <p class="prix">89 900 €</p>
+            <input class="quantite"
               type="number"
               name="quantity"
               id="no-of-items"
@@ -54,17 +52,15 @@
               max="6"
               step="1"
             />
-            <button id="remove" class="remove">
-              <i class="fas fa-trash fa-2x"></i>
-            </button>
+            <a href="#" class="supprimer">
+              <img src="../logo/supprimer.jpeg" width="80" height="80" alt="Loge">
+            </a>
           </div>
           <div class="cart-item" id="item1">
-            <div class="image">
-              <img src="../static/image/photo_voiture/1-face.jpg" alt="" />
-            </div>
-            <p>Fiat Abarth</p>
-            <p>34 900 €</p>
-            <input
+            <img class="presentation" src="../Photo_Voiture/1-face.jpg" alt="" />
+            <p class="nom">Fiat Abarth</p>
+            <p class="prix">34 900 €</p>
+            <input class="quantite"
               type="number"
               name="quantity"
               id="no-of-items"
@@ -73,17 +69,15 @@
               max="6"
               step="1"
             />
-            <button id="remove2" class="remove">
-              <i class="fas fa-trash fa-2x"></i>
-            </button>
+            <a href="#" class="supprimer">
+              <img src="../logo/supprimer.jpeg" width="80" height="80" alt="Loge">
+            </a>
           </div>
           <div class="cart-item" id="item2">
-            <div class="image">
-              <img src="../static/image/photo_voiture/5-face.jpg" alt="" />
-            </div>
-            <p>Ferrari Roma</p>
-            <p>281 500 €</p>
-            <input
+            <img class="presentation" src="../Photo_Voiture/5-face.jpg" alt="" />
+            <p class="nom">Ferrari Roma</p>
+            <p class="prix">281 500 €</p>
+            <input class="quantite"
               type="number"
               name="quantity"
               id="no-of-items"
@@ -92,9 +86,9 @@
               max="6"
               step="1"
             />
-            <button id="remove3" class="remove">
-              <i class="fas fa-trash fa-2x"></i>
-            </button>
+            <a href="#" class="supprimer">
+              <img src="../logo/supprimer.jpeg" width="80" height="80" alt="Loge">
+            </a>
           </div>
           <hr />
         </div>

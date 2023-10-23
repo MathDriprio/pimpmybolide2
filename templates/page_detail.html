@@ -1,0 +1,59 @@
+{% extends 'layout.html' %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style/page-detail.css') }}">
+{% endblock %}
+{% block body %}
+    <header>
+        <h1>{{ voiture.nomMarque}}<span class="product-title-additional">{{ voiture.nomVoiture }}</span></h1>
+    </header>
+
+    <section class="product-details">
+        <div class="product-images">
+            <div id="product-carousel" class="carousel">
+                <!-- Les images du produit -->
+                <img src="/static/images/photo_voiture/{{ voiture.idVoiture }}-face.jpg" alt="Image 1" class="carousel-item" style="display: block;">
+                <img src="/static/images/photo_voiture/{{ voiture.idVoiture }}-cul.jpg" alt="Image 2" class="carousel-item" style="display: none;">
+                <img src="/static/images/photo_voiture/{{ voiture.idVoiture }}-volant.jpg" alt="Image 3" class="carousel-item" style="display: none;">
+            </div>
+            <div id="tuned-car-carousel" class="carousel">
+                <img src="/static/images/photo_voiture/{{ voiture.idVoiture }}-face2.jpg" alt="Voiture tunée" class="tuned-car-image" style="display: none;">
+                <img src="/static/images/photo_voiture/{{ voiture.idVoiture }}-cul2.jpg" alt="Voiture tunée" class="tuned-car-image" style="display: none;">
+                <img src="/static/images/photo_voiture/{{ voiture.idVoiture }}-volant2.jpg" alt="Voiture tunée" class="tuned-car-image" style="display: none;">
+            </div>
+            <button id="prev-button" class="image-nav-button">&#9664;</button>
+            <button id="next-button" class="image-nav-button">&#9654;</button>
+        </div>
+
+        <div class="product-info">
+            <div class="product-options">
+                <label for="engine-stage">Choisir la puissance du moteur :</label>
+                <select id="engine-stage">
+                    <option value="stage0">Stage 0 : {{ voiture.chStage0 }}ch</option>
+                    <option value="stage1">Stage 1 : {{ voiture.chStage1 }}ch</option>
+                    <option value="stage2">Stage 2 : {{ voiture.chStage2 }}ch</option>
+                    <option value="stage3">Stage 3 : {{ voiture.chStage3 }}ch</option>
+                </select>
+                <!-- Bouton pour l'option de tuning -->
+                <button id="tuning-button">Option Tuning</button>
+            </div>
+
+            <ul>
+                <li>Marque : <span id="product-brand">{{ voiture.nomMarque }}</span></li>
+                <li>Modèle : <span id="product-model">{{ voiture.nomVoiture }}</span></li>
+                <li>Prix : <span title="{{ voiture.prixVoiture }}" id="product-price">{{ voiture.prixVoiture }}</span> €</li>
+                <li>Stock : <span id="product-stock">10</span> unités</li>
+            </ul>
+
+            <h3>Descriptif :</h3>
+            <p id="product-description">
+                {{ voiture.description }}
+            </p>
+
+            <button id="add-to-cart-button">Ajouter au Panier</button>
+        </div>
+    </section>
+
+    <script src="{{ url_for('static', filename = 'script/script.js') }}"></script>
+{% endblock %}
+

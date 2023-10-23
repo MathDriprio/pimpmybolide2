@@ -35,4 +35,3 @@ def page_panier():
 
 if __name__ == '__main__':
     app.run()
-

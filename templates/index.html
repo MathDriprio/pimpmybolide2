@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,11 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pimp My bolide</title>
+  <link rel="stylesheet" href="Filtre.css">
+
 
   <!-- 
     - favicon
   -->
-  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="./assets/images/favicon.png" >
 
   <!-- 
     - custom css link
@@ -23,13 +25,111 @@
 <body id="top">
 
   <!-- 
-    - #HEADER
+    - #navbar
   -->
 
+  <header class="header" data-header>
+    <div class="boite">
+
+      <div class="overlay" data-overlay></div>
+
+      <a href="#" class="logo">
+        <img src="./assets/images/favicon.png" width="160" height="50" alt="Loge">
+      </a>
+
+      <button class="nav-open-btn" data-nav-open-btn aria-label="Open Menu">
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+
+      <nav class="navbar" data-navbar>
+
+        <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+
+        <a href="#" class="logo">
+          <img src="./assets/images/logo.png" width="190" height="50" alt="logo">
+        </a>
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link">Home</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link">About</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link">Products</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link">Shop</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link">Blog</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link">Contact</a>
+          </li>
+
+        </ul>
+
+
+        <ul class="nav-action-list">
+
+          <li>
+            <button class="nav-action-btn">
+              <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+
+              <span class="nav-action-text">Search</span>
+            </button>
+          </li>
+
+          <li>
+            <a href="#" class="nav-action-btn">
+              <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+
+              <span class="nav-action-text">Login / Register</span>
+            </a>
+          </li>
+
+
+          <li>
+            <button class="nav-action-btn">
+              <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+
+              <span class="nav-action-text">Wishlist</span>
+
+              <data class="nav-action-badge" value="5" aria-hidden="true">5</data>
+            </button>
+          </li>
+
+          <li>
+            <button class="nav-action-btn">
+              <ion-icon name="bag-outline" aria-hidden="true"></ion-icon>
 
 
 
+              <data class="nav-action-badge" value="1" aria-hidden="true">4</data>
+            </button>
+          </li>
 
+        </ul>
+
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- 
+        - navbar
+      -->
 
 
   <main>
@@ -37,381 +137,343 @@
       <!-- 
         - #PRODUCT
       -->
+      <section class="section produit">
+        <div class="boite">
 
-      <section class="section product">
-        <div class="container">
+          <h2 class="h2 section-titre">Bestsellers bolide</h2>
 
-          <h2 class="h2 section-title">Bestsellers bolide</h2>
 
-          <ul class="filter-list">
+          <!--Filtre-->
 
-            <li>
-              <button class="filter-btn  active">All</button>
+
+          <ul class="filtre-list">
+
+            <li class=filtre-item>
+              <input id="li1" type="radio" name="radio" value="1">
+              <label class="filtre-titre filtre-btn active" for="li1">All</label>
             </li>
 
-            <li>
-              <button class="filter-btn">Ferrari</button>
+            <li class=filtre-item>
+              <input id="li6" type="radio" name="radio" value="6">
+              <label class="filtre-titre filtre-btn" for="li6">Ferrari</label>
             </li>
 
-            <li>
-              <button class="filter-btn">Fiat </button>
+            <li class=filtre-item>
+              <input id="li2" type="radio" name="radio" value="2">
+              <label class="filtre-titre filtre-btn" for="li2">Fiat</label>
             </li>
 
-            <li>
-              <button class="filter-btn">Porche</button>
+            <li class=filtre-item>
+              <input id="li3" type="radio" name="radio" value="3">
+              <label class="filtre-titre filtre-btn" for="li3">Porche</label>
             </li>
 
-            <li>
-              <button class="filter-btn">BMW</button>
+            <li class=filtre-item>
+              <input id="li4" type="radio" name="radio" value="4">
+              <label class="filtre-titre filtre-btn" for="li4">BMW</label>
             </li>
 
-            <li>
-              <button class="filter-btn">Mercedes</button>
-            </li>
-
-          </ul>
-
-<!--Filtre-->
-          <ul class="Filtre1">
-
-            <li>
-              <div>
-                <input type="checkbox" class="Filtre1-cases" name="Filtre1-cases" checked />
-                <label for="Filtre1-cases">Scales</label>
-              </div>
-            </li>
-
-            <li>
-              <div>
-                <input type="checkbox" class="Filtre1-cases" name="Filtre1-cases" checked />
-                <label for="Filtre1-cases">Scales</label>
-              </div>            
-            </li>
-
-            <li>
-              <div>
-                <input type="checkbox" class="Filtre1-cases" name="Filtre1-cases" checked />
-                <label for="Filtre1-cases">Scales</label>
-              </div>       
-            </li>
-
-            <li>
-              <div>
-                <input type="checkbox" class="Filtre1-cases" name="Filtre1-cases" checked />
-                <label for="Filtre1-cases">Scales</label>
-              </div>       
-            </li>
-
-            <li>
-              <div>
-                <input type="checkbox" class="Filtre1-cases" name="Filtre1-cases" checked />
-                <label for="Filtre1-cases">Scales</label>
-              </div>       
-            </li>
-
-            <li>
-              <div>
-                <input type="checkbox" class="Filtre1-cases" name="Filtre1-cases" checked />
-                <label for="Filtre1-cases">Scales</label>
-              </div>       
+            <li class=filtre-item>
+              <input id="li5" type="radio" name="radio" value="5">
+              <label class="filtre-titre filtre-btn" for="li5">Mercedes</label>
             </li>
 
           </ul>
-          
 
-          <ul class="product-list">
 
-            <li class="product-item">
-              <div class="product-card" tabindex="0">
 
-                <figure class="card-banner">
+
+          <ul class="produit-list">
+
+            <li class="produit-item">
+              <div class="produit-case" tabindex="0">
+
+                <figure class="case-banner">
                   <img src="./assets/images/AbarthFace.jpg" width="312" height="350" loading="lazy"
                     alt="Fiat Abarth 595" class="image-contain">
 
-                  <div class="card-badge">New</div>
 
-                  <ul class="card-action-list">
+                  <ul class="case-action-list">
 
-                    <li class="card-action-item">
-                      <button class="card-action-btn" aria-labelledby="card-label-1">
+                    <li class="case-action-item">
+                      <button class="case-action-btn" aria-labelledby="case-label-1">
                         <ion-icon name="cart-outline"></ion-icon>
                       </button>
 
-                      <div class="card-action-tooltip" id="card-label-1">Ajouter au panier</div>
+                      <div class="case-action-tooltip" id="case-label-1">Ajouter au panier</div>
                     </li>
 
-                    <li class="card-action-item">
-                      <button class="card-action-btn" aria-labelledby="card-label-2">
+                    <li class="case-action-item">
+                      <button class="case-action-btn" aria-labelledby="case-label-2">
                         <ion-icon name="heart-outline"></ion-icon>
                       </button>
 
-                      <div class="card-action-tooltip" id="card-label-2">Ajouter à la liste d'envie</div>
+                      <div class="case-action-tooltip" id="case-label-2">Ajouter à la liste d'envie</div>
                     </li>
 
 
 
-                    
+
 
                   </ul>
                 </figure>
 
-                <div class="card-content">
+                <div class="case-contenue">
 
-                  <div class="card-cat">
-                    <a href="#" class="card-cat-link">Sport</a> /
-                    <a href="#" class="card-cat-link">compact</a>
+                  <div class="case-cat">
+                    <a href="#" class="case-cat-link">Sport</a> /
+                    <a href="#" class="case-cat-link">compact</a>
                   </div>
 
-                  <h3 class="h3 card-title">
-                    <a href="#">Fiat Abarth 595</a>
+                  <h3 class="h3 case-titre">
+                    <a href="#j">Fiat Abarth 595</a>
                   </h3>
 
-                  <data class="card-price" value="28000">28 000€</data>
+                  <data class="case-prix" value="28000">28 000€</data>
 
                 </div>
 
               </div>
             </li>
 
-            <li class="product-item">
-              <div class="product-card" tabindex="0">
+            <li class="produit-item">
+              <div class="produit-case" tabindex="0">
 
-                <figure class="card-banner">
-                  <img src="./assets/images/porcheGTFace.jpg" width="312" height="350" loading="lazy"
-                    alt="porcheGTFace" class="image-contain">
+                <figure class="case-banner">
+                  <img src="./assets/images/porcheGTFace.jpg" width="312" height="350" loading="lazy" alt="porcheGTFace"
+                    class="image-contain">
 
-                  <ul class="card-action-list">
+                  <ul class="case-action-list">
 
-                    <li class="card-action-item">
-                      <button class="card-action-btn" aria-labelledby="card-label-1">
+                    <li class="case-action-item">
+                      <button class="case-action-btn" aria-labelledby="case-label-1">
                         <ion-icon name="cart-outline"></ion-icon>
                       </button>
 
-                      <div class="card-action-tooltip" id="card-label-1">Ajouter au panier</div>
+                      <div class="case-action-tooltip" id="case-label-1">Ajouter au panier</div>
                     </li>
 
-                    <li class="card-action-item">
-                      <button class="card-action-btn" aria-labelledby="card-label-2">
+                    <li class="case-action-item">
+                      <button class="case-action-btn" aria-labelledby="case-label-2">
                         <ion-icon name="heart-outline"></ion-icon>
                       </button>
 
-                      <div class="card-action-tooltip" id="card-label-2">Ajouter à la liste d'envie</div>
+                      <div class="case-action-tooltip" id="case-label-2">Ajouter à la liste d'envie</div>
                     </li>
 
-                    
+
 
                   </ul>
                 </figure>
 
-                <div class="card-content">
+                <div class="case-contenue">
 
-                  <div class="card-cat">
-                    <a href="#" class="card-cat-link">SuperSport</a> /
-                    <a href="#" class="card-cat-link">SuperCar</a>
+                  <div class="case-cat">
+                    <a href="#" class="case-cat-link">SuperSport</a> /
+                    <a href="#" class="case-cat-link">SuperCar</a>
                   </div>
 
-                  <h3 class="h3 card-title">
+                  <h3 class="h3 case-titre">
                     <a href="#">Porsche Carrera GT</a>
                   </h3>
 
-                  <data class="card-price" value="149000000">149 000 000€</data>
+                  <data class="case-prix" value="149000000">149 000 000€</data>
 
                 </div>
 
               </div>
             </li>
 
-            <li class="product-item">
-              <div class="product-card" tabindex="0">
+            <li class="produit-item">
+              <div class="produit-case" tabindex="0">
 
-                <figure class="card-banner">
-                  <img src="./assets/images/G63Face_.jpg" width="312" height="350" loading="lazy"
-                    alt="G63Face_" class="image-contain">
+                <figure class="case-banner">
+                  <img src="./assets/images/G63Face_.jpg" width="312" height="350" loading="lazy" alt="G63Face_"
+                    class="image-contain">
 
-                  <div class="card-badge">New</div>
 
-                  <ul class="card-action-list">
+                  <ul class="case-action-list">
 
-                    <li class="card-action-item">
-                      <button class="card-action-btn" aria-labelledby="card-label-1">
+                    <li class="case-action-item">
+                      <button class="case-action-btn" aria-labelledby="case-label-1">
                         <ion-icon name="cart-outline"></ion-icon>
                       </button>
 
-                      <div class="card-action-tooltip" id="card-label-1">Ajouter au panier</div>
+                      <div class="case-action-tooltip" id="case-label-1">Ajouter au panier</div>
                     </li>
 
-                    <li class="card-action-item">
-                      <button class="card-action-btn" aria-labelledby="card-label-2">
+                    <li class="case-action-item">
+                      <button class="case-action-btn" aria-labelledby="case-label-2">
                         <ion-icon name="heart-outline"></ion-icon>
                       </button>
 
-                      <div class="card-action-tooltip" id="card-label-2">Ajouter à la liste d'envie</div>
+                      <div class="case-action-tooltip" id="case-label-2">Ajouter à la liste d'envie</div>
                     </li>
 
 
-                    
+
 
                   </ul>
                 </figure>
 
-                <div class="card-content">
+                <div class="case-contenue">
 
-                  <div class="card-cat">
-                    <a href="#" class="card-cat-link">Sport</a> /
-                    <a href="#" class="card-cat-link">4X4</a>
+                  <div class="case-cat">
+                    <a href="#" class="case-cat-link">Sport</a> /
+                    <a href="#" class="case-cat-link">4X4</a>
                   </div>
 
-                  <h3 class="h3 card-title">
+                  <h3 class="h3 case-titre">
                     <a href="#">MERCEDES-BENZ G-Class AMG G 63 TI</a>
                   </h3>
 
-                  <data class="card-price" value="273259.25">273 259.25€</data>
+                  <data class="case-prix" value="273259.25">273 259.25€</data>
 
                 </div>
 
               </div>
             </li>
 
-            <li class="product-item">
-              <div class="product-card" tabindex="0">
+            <li class="produit-item">
+              <div class="produit-case" tabindex="0">
 
-                <figure class="card-banner">
-                  <img src="./assets/images/FaceBMW.jpg" width="312" height="350" loading="lazy"
-                    alt="FaceBMW" class="image-contain">
+                <figure class="case-banner">
+                  <img src="./assets/images/FaceBMW.jpg" width="312" height="350" loading="lazy" alt="FaceBMW"
+                    class="image-contain">
 
-                  <ul class="card-action-list">
+                  <ul class="case-action-list">
 
-                    <li class="card-action-item">
-                      <button class="card-action-btn" aria-labelledby="card-label-1">
+                    <li class="case-action-item">
+                      <button class="case-action-btn" aria-labelledby="case-label-1">
                         <ion-icon name="cart-outline"></ion-icon>
                       </button>
 
-                      <div class="card-action-tooltip" id="card-label-1">Ajouter au panier</div>
+                      <div class="case-action-tooltip" id="case-label-1">Ajouter au panier</div>
                     </li>
 
-                    <li class="card-action-item">
-                      <button class="card-action-btn" aria-labelledby="card-label-2">
+                    <li class="case-action-item">
+                      <button class="case-action-btn" aria-labelledby="case-label-2">
                         <ion-icon name="heart-outline"></ion-icon>
                       </button>
 
-                      <div class="card-action-tooltip" id="card-label-2">Ajouter à la liste d'envie</div>
+                      <div class="case-action-tooltip" id="case-label-2">Ajouter à la liste d'envie</div>
                     </li>
 
 
-                    
+
 
                   </ul>
                 </figure>
 
-                <div class="card-content">
+                <div class="case-contenue">
 
-                  <div class="card-cat">
-                    <a href="#" class="card-cat-link">Sport</a>/
-                    <a href="#" class="card-cat-link">Drift</a>
+                  <div class="case-cat">
+                    <a href="#" class="case-cat-link">Sport</a>/
+                    <a href="#" class="case-cat-link">Drift</a>
                   </div>
 
-                  <h3 class="h3 card-title">
+                  <h3 class="h3 case-titre">
                     <a href="#">BMW M3 COMPETITION</a>
                   </h3>
 
-                  <data class="card-price" value="119900">119 900€</data>
+                  <data class="case-prix" value="119900">119 900€</data>
 
                 </div>
 
               </div>
             </li>
 
-            <li class="product-item">
-              <div class="product-card" tabindex="0">
+            <li class="produit-item">
+              <div class="produit-case" tabindex="0">
 
-                <figure class="card-banner">
-                  <img src="./assets/images/faceRomajpg" width="312" height="350" loading="lazy"
-                    alt="faceRoma" class="image-contain">
+                <figure class="case-banner">
+                  <img src="./assets/images/faceRomajpg" width="312" height="350" loading="lazy" alt="faceRoma"
+                    class="image-contain">
 
-                  <ul class="card-action-list">
+                  <ul class="case-action-list">
 
-                    <li class="card-action-item">
-                      <button class="card-action-btn" aria-labelledby="card-label-1">
+                    <li class="case-action-item">
+                      <button class="case-action-btn" aria-labelledby="case-label-1">
                         <ion-icon name="cart-outline"></ion-icon>
                       </button>
 
-                      <div class="card-action-tooltip" id="card-label-1">Ajouter au panier</div>
+                      <div class="case-action-tooltip" id="case-label-1">Ajouter au panier</div>
                     </li>
 
-                    <li class="card-action-item">
-                      <button class="card-action-btn" aria-labelledby="card-label-2">
+                    <li class="case-action-item">
+                      <button class="case-action-btn" aria-labelledby="case-label-2">
                         <ion-icon name="heart-outline"></ion-icon>
                       </button>
 
-                      <div class="card-action-tooltip" id="card-label-2">Ajouter à la liste d'envie</div>
+                      <div class="case-action-tooltip" id="case-label-2">Ajouter à la liste d'envie</div>
                     </li>
 
-                    
+
 
                   </ul>
                 </figure>
 
-                <div class="card-content">
+                <div class="case-contenue">
 
-                  <div class="card-cat">
-                    <a href="#" class="card-cat-link">SuperSport</a> /
-                    <a href="#" class="card-cat-link">SuperCar</a>
+                  <div class="case-cat">
+                    <a href="#" class="case-cat-link">SuperSport</a> /
+                    <a href="#" class="case-cat-link">SuperCar</a>
                   </div>
 
-                  <h3 class="h3 card-title">
+                  <h3 class="h3 case-titre">
                     <a href="#">FERRARI ROMA</a>
                   </h3>
 
-                  <data class="card-price" value="279900">279 900€</data>
+                  <data class="case-prix" value="279900">279 900€</data>
 
                 </div>
 
               </div>
             </li>
 
-            <li class="product-item">
-              <div class="product-card" tabindex="0">
+            <li class="produit-item">
+              <div class="produit-case" tabindex="0">
 
-                <figure class="card-banner">
-                  <img src="./assets/images/Face 459.jpg" width="312" height="350" loading="lazy"
-                    alt="Face458" class="image-contain">
+                <figure class="case-banner">
+                  <img src="./assets/images/Face 459.jpg" width="312" height="350" loading="lazy" alt="Face458"
+                    class="image-contain">
 
-                  <ul class="card-action-list">
+                  <ul class="case-action-list">
 
-                    <li class="card-action-item">
-                      <button class="card-action-btn" aria-labelledby="card-label-1">
+                    <li class="case-action-item">
+                      <button class="case-action-btn" aria-labelledby="case-label-1">
                         <ion-icon name="cart-outline"></ion-icon>
                       </button>
 
-                      <div class="card-action-tooltip" id="card-label-1">Ajouter au panier</div>
+                      <div class="case-action-tooltip" id="case-label-1">Ajouter au panier</div>
                     </li>
 
-                    <li class="card-action-item">
-                      <button class="card-action-btn" aria-labelledby="card-label-2">
+                    <li class="case-action-item">
+                      <button class="case-action-btn" aria-labelledby="case-label-2">
                         <ion-icon name="heart-outline"></ion-icon>
                       </button>
 
-                      <div class="card-action-tooltip" id="card-label-2">Ajouter à la liste d'envie</div>
+                      <div class="case-action-tooltip" id="case-label-2">Ajouter à la liste d'envie</div>
                     </li>
 
 
-                   
+
 
                   </ul>
                 </figure>
 
-                <div class="card-content">
+                <div class="case-contenue">
 
-                  <div class="card-cat">
-                    <a href="#" class="card-cat-link">SuperSport</a> /
-                    <a href="#" class="card-cat-link">SuperCar</a>
+                  <div class="case-cat">
+                    <a href="#" class="case-cat-link">SuperSport</a> /
+                    <a href="#" class="case-cat-link">SuperCar</a>
                   </div>
 
-                  <h3 class="h3 card-title">
+                  <h3 class="h3 case-titre">
                     <a href="#">FERRARI 458 ITALIA</a>
                   </h3>
 
-                  <data class="card-price" value="219900">219 900€</data>
+                  <data class="case-prix" value="219900">219 900€</data>
 
                 </div>
 
@@ -427,7 +489,7 @@
 
 
 
-      
+
 
 
 
@@ -437,23 +499,23 @@
       -->
 
       <section class="section service">
-        <div class="container">
+        <div class="boite">
 
           <ul class="service-list">
 
-            
+
 
             <li class="service-item">
-              <div class="service-card">
+              <div class="service-case">
 
-                <div class="card-icon">
+                <div class="case-icon">
                   <img src="./assets/images/service-2.png" width="43" height="35" loading="lazy" alt="Service icon">
                 </div>
 
                 <div>
-                  <h3 class="h4 card-title">Quick Payment</h3>
+                  <h3 class="h4 case-titre">Quick Payment</h3>
 
-                  <p class="card-text">
+                  <p class="case-text">
                     100% secure payment
                   </p>
                 </div>
@@ -462,16 +524,16 @@
             </li>
 
             <li class="service-item">
-              <div class="service-card">
+              <div class="service-case">
 
-                <div class="card-icon">
+                <div class="case-icon">
                   <img src="./assets/images/service-3.png" width="40" height="40" loading="lazy" alt="Service icon">
                 </div>
 
                 <div>
-                  <h3 class="h4 card-title">Free Returns</h3>
+                  <h3 class="h4 case-titre">Free Returns</h3>
 
-                  <p class="card-text">
+                  <p class="case-text">
                     Money back in 30 days
                   </p>
                 </div>
@@ -480,16 +542,16 @@
             </li>
 
             <li class="service-item">
-              <div class="service-card">
+              <div class="service-case">
 
-                <div class="card-icon">
+                <div class="case-icon">
                   <img src="./assets/images/service-4.png" width="40" height="40" loading="lazy" alt="Service icon">
                 </div>
 
                 <div>
-                  <h3 class="h4 card-title">24/7 Support</h3>
+                  <h3 class="h4 case-titre">24/7 Support</h3>
 
-                  <p class="card-text">
+                  <p class="case-text">
                     Get Quick Support
                   </p>
                 </div>
@@ -508,232 +570,232 @@
 
 
 
-  <!-- 
+      <!-- 
     - #FOOTER
   -->
 
-  <footer class="footer">
+      <footer class="footer">
 
-    <div class="footer-top section">
-      <div class="container">
+        <div class="footer-top section">
+          <div class="boite">
 
-        <div class="footer-brand">
+            <div class="footer-marque">
 
-          <a href="#" class="logo">
-            <img src="./assets/images/logo.png" width="160" height="50" alt="logo">
-          </a>
-
-          <ul class="social-list">
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-facebook"></ion-icon>
+              <a href="#" class="logo">
+                <img src="./assets/images/logo.png" width="160" height="50" alt="logo">
               </a>
-            </li>
 
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-twitter"></ion-icon>
-              </a>
-            </li>
+              <ul class="social-list">
 
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-pinterest"></ion-icon>
-              </a>
-            </li>
+                <li>
+                  <a href="#" class="social-link">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                  </a>
+                </li>
 
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-linkedin"></ion-icon>
-              </a>
-            </li>
+                <li>
+                  <a href="#" class="social-link">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                  </a>
+                </li>
 
-          </ul>
+                <li>
+                  <a href="#" class="social-link">
+                    <ion-icon name="logo-pinterest"></ion-icon>
+                  </a>
+                </li>
 
-        </div>
+                <li>
+                  <a href="#" class="social-link">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                  </a>
+                </li>
 
-        <div class="footer-link-box">
+              </ul>
 
-          <ul class="footer-list">
+            </div>
 
-            <li>
-              <p class="footer-list-title">Contact Us</p>
-            </li>
+            <div class="footer-link-box">
 
-            <li>
-              <address class="footer-link">
-                <ion-icon name="location"></ion-icon>
+              <ul class="footer-list">
 
-                <span class="footer-link-text">
-                  2751 S Parker Rd, Aurora, CO 80014, United States
-                </span>
-              </address>
-            </li>
+                <li>
+                  <p class="footer-list-titre">Contact Us</p>
+                </li>
 
-            <li>
-              <a href="tel:+557343673257" class="footer-link">
-                <ion-icon name="call"></ion-icon>
+                <li>
+                  <address class="footer-link">
+                    <ion-icon name="location"></ion-icon>
 
-                <span class="footer-link-text">+557343673257</span>
-              </a>
-            </li>
+                    <span class="footer-link-text">
+                      2751 S Parker Rd, Aurora, CO 80014, United States
+                    </span>
+                  </address>
+                </li>
 
-            <li>
-              <a href="mailto:pimpMyBolide@help.com" class="footer-link">
-                <ion-icon name="mail"></ion-icon>
+                <li>
+                  <a href="tel:+557343673257" class="footer-link">
+                    <ion-icon name="call"></ion-icon>
 
-                <span class="footer-link-text">pimpMyBolide@help.com</span>
-              </a>
-            </li>
+                    <span class="footer-link-text">+557343673257</span>
+                  </a>
+                </li>
 
-          </ul>
+                <li>
+                  <a href="mailto:pimpMyBolide@help.com" class="footer-link">
+                    <ion-icon name="mail"></ion-icon>
 
-          <ul class="footer-list">
+                    <span class="footer-link-text">pimpMyBolide@help.com</span>
+                  </a>
+                </li>
 
-            <li>
-              <p class="footer-list-title">My Account</p>
-            </li>
+              </ul>
 
-            <li>
-              <a href="#" class="footer-link">
-                <ion-icon name="chevron-forward-outline"></ion-icon>
+              <ul class="footer-list">
 
-                <span class="footer-link-text">My Account</span>
-              </a>
-            </li>
+                <li>
+                  <p class="footer-list-titre">My Account</p>
+                </li>
 
-            <li>
-              <a href="#" class="footer-link">
-                <ion-icon name="chevron-forward-outline"></ion-icon>
+                <li>
+                  <a href="#" class="footer-link">
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
 
-                <span class="footer-link-text">View Cart</span>
-              </a>
-            </li>
+                    <span class="footer-link-text">My Account</span>
+                  </a>
+                </li>
 
-            <li>
-              <a href="#" class="footer-link">
-                <ion-icon name="chevron-forward-outline"></ion-icon>
+                <li>
+                  <a href="#" class="footer-link">
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
 
-                <span class="footer-link-text">Wishlist</span>
-              </a>
-            </li>
+                    <span class="footer-link-text">View Cart</span>
+                  </a>
+                </li>
 
-            <li>
-              <a href="#" class="footer-link">
-                <ion-icon name="chevron-forward-outline"></ion-icon>
+                <li>
+                  <a href="#" class="footer-link">
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
 
-                <span class="footer-link-text">Compare</span>
-              </a>
-            </li>
+                    <span class="footer-link-text">Wishlist</span>
+                  </a>
+                </li>
 
-            <li>
-              <a href="#" class="footer-link">
-                <ion-icon name="chevron-forward-outline"></ion-icon>
+                <li>
+                  <a href="#" class="footer-link">
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
 
-                <span class="footer-link-text">New Products</span>
-              </a>
-            </li>
+                    <span class="footer-link-text">Compare</span>
+                  </a>
+                </li>
 
-          </ul>
+                <li>
+                  <a href="#" class="footer-link">
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
 
-          <div class="footer-list">
+                    <span class="footer-link-text">New Products</span>
+                  </a>
+                </li>
 
-            <p class="footer-list-title">Help</p>
+              </ul>
 
-            <table class="footer-table">
-              <tbody>
+              <div class="footer-list">
 
-                <ul>
-      
-                  <li>
-                    <a href="#" class="footer-link">
-      
-                      <span class="footer-link-text">Help center</span>
-                    </a>
-                  </li>
-      
-                  <li>
-                    <a href="#" class="footer-link">
+                <p class="footer-list-titre">Help</p>
 
-      
-                      <span class="footer-link-text">orders Status</span>
-                    </a>
-                  </li>
-      
-                  <li>
-                    <a href="#" class="footer-link">
+                <table class="footer-table">
+                  <tbody>
 
-      
-                      <span class="footer-link-text">Returns & Orders</span>
-                    </a>
-                  </li>     
-                </ul>
+                    <ul>
 
-              </tbody>
-            </table>
+                      <li>
+                        <a href="#" class="footer-link">
+
+                          <span class="footer-link-text">Help center</span>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#" class="footer-link">
+
+
+                          <span class="footer-link-text">orders Status</span>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#" class="footer-link">
+
+
+                          <span class="footer-link-text">Returns & Orders</span>
+                        </a>
+                      </li>
+                    </ul>
+
+                  </tbody>
+                </table>
+
+              </div>
+
+              <div class="footer-list">
+
+                <p class="footer-list-titre">Newsletter</p>
+
+                <p class="newsletter-text">
+                  Authoritatively morph 24/7 potentialities with error-free partnerships.
+                </p>
+
+                <form action="" class="newsletter-form">
+                  <input type="email" name="email" required placeholder="Email Address" class="newsletter-input">
+
+                  <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+
+              </div>
+
+            </div>
 
           </div>
+        </div>
 
-          <div class="footer-list">
+        <div class="footer-bottom">
+          <div class="boite">
 
-            <p class="footer-list-title">Newsletter</p>
-
-            <p class="newsletter-text">
-              Authoritatively morph 24/7 potentialities with error-free partnerships.
+            <p class="copyright">
+              &copy; 2023 <a href="#" class="copyright-link">codealexis</a>. All Rights Reserved
             </p>
 
-            <form action="" class="newsletter-form">
-              <input type="email" name="email" required placeholder="Email Address" class="newsletter-input">
-
-              <button type="submit" class="btn btn-primary">Subscribe</button>
-            </form>
-
           </div>
-
         </div>
 
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <div class="container">
-
-        <p class="copyright">
-          &copy; 2023 <a href="#" class="copyright-link">codealexis</a>. All Rights Reserved
-        </p>
-
-      </div>
-    </div>
-
-  </footer>
+      </footer>
 
 
 
 
 
-  <!-- 
+      <!-- 
     - #GO TO TOP
   -->
 
-  <a href="#top" class="go-top-btn" data-go-top>
-    <ion-icon name="arrow-up-outline"></ion-icon>
-  </a>
+      <a href="#top" class="go-top-btn" data-go-top>
+        <ion-icon name="arrow-up-outline"></ion-icon>
+      </a>
 
 
 
 
 
-  <!-- 
+      <!-- 
     - custom js link
   -->
-  <script src="./assets/js/script.js"></script>
+      <script src="./assets/js/script.js"></script>
 
-  <!-- 
+      <!-- 
     - ionicon link
   -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
 

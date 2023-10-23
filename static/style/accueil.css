@@ -1,0 +1,36 @@
+.textpresentation{
+    text-align: center;
+    margin: auto;
+    width: 500px;
+}
+
+.bouton {
+    padding: 10px 25px;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+
+
+    border: 1px solid;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 100px;
+
+    background: white;
+    color: hsl(5, 100%, 69%);
+    border-color:hsl(5, 100%, 69%);
+  }
+  
+  .image-liste{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  #imagePricipale{
+    margin-bottom: 50px;
+  }
+  

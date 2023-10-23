@@ -1,10 +1,29 @@
- <header class="header" data-header>
-    <div class="container">
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/favicon.png" >
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="../static/style/style.css">
+
+
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #navbar
+  -->
+
+  <header class="header" data-header>
+    <div class="boite">
 
       <div class="overlay" data-overlay></div>
 
-      <a href="#" class="logo">
-        <img src="{{ url_for('static', filename = 'images/logo.png') }}" width="160" height="50" alt="Loge">
+      <a href="./acceuil.html" class="logo">
+        <img src="../static/image/miniLogo.jpeg" width="80" height="80" alt="Loge">
       </a>
 
       <button class="nav-open-btn" data-nav-open-btn aria-label="Open Menu">
@@ -18,7 +37,7 @@
         </button>
 
         <a href="#" class="logo">
-          <img src="{{ url_for('static', filename = 'images/logo.png') }}" width="190" height="50" alt="logo">
+          <img src="../static/image/miniLogo.jpeg" width="90" height="90" alt="logo">
         </a>
 
         <ul class="navbar-list">
@@ -59,7 +78,6 @@
               <span class="nav-action-text">Search</span>
             </button>
           </li>
-<!--menu burg -->
 
           <li>
             <a href="#" class="nav-action-btn">
@@ -68,7 +86,7 @@
               <span class="nav-action-text">Login / Register</span>
             </a>
           </li>
-<!--menu burg -->
+
 
           <li>
             <button class="nav-action-btn">
@@ -79,12 +97,12 @@
               <data class="nav-action-badge" value="5" aria-hidden="true">5</data>
             </button>
           </li>
-<!--menu burg -->
+
           <li>
             <button class="nav-action-btn">
               <ion-icon name="bag-outline" aria-hidden="true"></ion-icon>
 
-              <data class="nav-action-text" value="28 000€">Basket: <strong>28 000€</strong></data>
+
 
               <data class="nav-action-badge" value="1" aria-hidden="true">4</data>
             </button>
@@ -96,3 +114,8 @@
 
     </div>
   </header>
+
+
+  <!-- 
+        - navbar
+      -->

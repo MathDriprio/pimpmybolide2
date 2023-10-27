@@ -115,3 +115,48 @@ header {
     max-width: 100%; /* Assurez-vous que l'image de la voiture tunée est responsive */
     display: none; /* L'image ne sera pas affichée  par défaut */
 }
+
+#tuning-button {
+    appearance: auto;
+    text-rendering: auto;
+    color: buttontext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    box-sizing: border-box;
+    background-color: buttonface;
+    writing-mode: horizontal-tb !important;
+    margin: 0em;
+    padding-block: 1px;
+    padding-inline: 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
+}
+.info-ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+.info-ul li {
+    list-style: inside;
+}
+.info-ul li span {
+    display: initial;
+}
+
+.car-name {
+    margin-top: 100px;
+}

@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+}
+
+.product-details {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.product-images {
+    position: relative;
+    display: inline-block;
+}
+
+.product-images img {
+    display: none; /* Cache les images par défaut */
+    max-width: 100%; /* Assure que l'image ne dépasse pas les limites du conteneur */
+    height: auto; /* Maintient le rapport d'aspect de l'image */
+    vertical-align: middle;
+}
+
+.product-images img.carousel-item {
+    display: block; /* Montre l'image active */
+}
+
+.image-nav-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 2;
+    padding: 10px;
+}
+
+.image-nav-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#prev-button {
+    left: 0;
+}
+
+#next-button {
+    right: 0;
+}
+
+.product-info {
+    max-width: 500px;
+    padding: 20px;
+}
+
+.product-options {
+    margin-top: 20px;
+}
+
+.product-options label {
+    font-weight: bold;
+}
+
+.product-options select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#add-to-cart-button {
+    display: block;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#add-to-cart-button:hover {
+    background-color: #444;
+}
+/* CSS existant ... */
+
+/* Styles responsives */
+@media (max-width: 768px) {
+    .product-details {
+        flex-direction: column;
+        align-items: center; /* Centrer les éléments sur petits écrans */
+    }
+
+    .product-images, .product-info {
+        width: 100%; /* Permet aux éléments de remplir le conteneur sur petits écrans */
+        margin-bottom: 20px; /* Espacement entre les éléments empilés */
+    }
+
+    .image-nav-button {
+        font-size: 18px; /* Taille de police plus petite pour les boutons de navigation */
+    }
+}
+/* ... votre CSS existant ... */
+
+#tuned-car-image {
+    max-width: 100%; /* Assurez-vous que l'image de la voiture tunée est responsive */
+    display: none; /* L'image ne sera pas affichée  par défaut */
+}

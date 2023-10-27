@@ -8,21 +8,19 @@
     <title>Pimp My bolide</title>
 
 
+    <!--
+    - favicon
+  -->
+    <link rel="shortcut icon" href="./assets/images/favicon.png" >
 
     <!--
-        - favicon
-      -->
-    <link rel="shortcut icon" href="../static/image/miniLogo.jpeg">
-
-    <!--
-        - custom css link
-      -->
+      - custom css link
+    -->
     <link rel="stylesheet" href="../static/style/style.css">
-    <link rel="stylesheet" href="../static/style/accueil.css">
+    <link rel="stylesheet" href="../static/style/page-detail.css">
 
 
 </head>
-
 
 <body id="top">
 
@@ -35,7 +33,7 @@
 
         <div class="overlay" data-overlay></div>
 
-        <a href="./acceuil" class="logo">
+        <a href="/" class="logo">
             <img src="../static/image/grosLogo.png" width="250" height="80" alt="Loge">
         </a>
 
@@ -50,7 +48,7 @@
             </button>
 
             <a href="/" class="logo">
-                <img src="../static/image/miniLogo.jpeg" width="90" height="90" alt="logo">
+                <img src="../static/image/grosLogo.png" width="90" height="90" alt="logo">
             </a>
 
             <ul class="navbar-list">
@@ -60,11 +58,11 @@
                 </li>
 
                 <li class="navbar-item">
-                    <a href="#" class="navbar-link">About</a>
+                    <a href="/show_voiture" class="navbar-link">Products</a>
                 </li>
 
                 <li class="navbar-item">
-                    <a href="/show_voiture" class="navbar-link">Products</a>
+                    <a href="./show_voiture" class="navbar-link">Shop</a>
                 </li>
 
                 <li class="navbar-item">
@@ -103,11 +101,12 @@
                     </button>
                 </li>
 
-                <li onclick="location.href = './panier'">
-                    <button class="nav-action-btn" onclick="location.href = './panier'">
-                        <ion-icon name="bag-outline" aria-hidden="true" onclick="location.href = './panier'"></ion-icon>
-                        <data class="nav-action-badge" value="1" aria-hidden="true">4</data>
-                    </button>
+                <li>
+                    <a href="./panier">
+                        <button class="nav-action-btn">
+                            <ion-icon name="bag-outline" aria-hidden="true"></ion-icon>
+                            <data class="nav-action-badge" value="1" aria-hidden="true">4</data>
+                        </button>
                     </a>
                 </li>
 
@@ -119,35 +118,150 @@
 </header>
 
 
-<!--
-      - navbar
-    -->
+<!---
+  navbar
+  -->
 
 
+<header>
+    <h1>{{ voiture.nomMarque}}<span class="product-title-additional">{{ voiture.nomVoiture }}</span></h1>
+</header>
 
-<section class="section produit">
+<section class="product-details">
+    <div class="product-images">
+        <div id="product-carousel" class="carousel">
+            <!-- Les images du produit -->
+            <img src="../static/image/photo_voiture/{{ voiture.idVoiture }}-face.jpg" alt="Image 1" class="carousel-item" style="display: block;">
+            <img src="../static/image/photo_voiture/{{ voiture.idVoiture }}-cul.jpg" alt="Image 2" class="carousel-item" style="display: none;">
+            <img src="../static/image/photo_voiture/{{ voiture.idVoiture }}-volant.jpg" alt="Image 3" class="carousel-item" style="display: none;">
+        </div>
+        <div id="tuned-car-carousel" class="carousel">
+            <img src="../static/image/photo_voiture/{{ voiture.idVoiture }}-face2.jpg" alt="Voiture tunée" class="tuned-car-image" style="display: none;">
+            <img src="../static/image/photo_voiture/{{ voiture.idVoiture }}-cul2.jpg" alt="Voiture tunée" class="tuned-car-image" style="display: none;">
+            <img src="../static/image/photo_voiture/{{ voiture.idVoiture }}-volant2.jpg" alt="Voiture tunée" class="tuned-car-image" style="display: none;">
+        </div>
+        <button id="prev-button" class="image-nav-button">&#9664;</button>
+        <button id="next-button" class="image-nav-button">&#9654;</button>
+    </div>
 
+    <div class="product-info">
+        <div class="product-options">
+            <label for="engine-stage">Choisir la puissance du moteur :</label>
+            <select id="engine-stage">
+                <option value="stage0">Stage 0 : {{ voiture.chStage0 }}ch</option>
+                <option value="stage1">Stage 1 : {{ voiture.chStage1 }}ch</option>
+                <option value="stage2">Stage 2 : {{ voiture.chStage2 }}ch</option>
+                <option value="stage3">Stage 3 : {{ voiture.chStage3 }}ch</option>
+            </select>
+            <!-- Bouton pour l'option de tuning -->
+            <button id="tuning-button">Option Tuning</button>
+        </div>
 
-
-    <div class="boite">
-        <h1 class="h1 section-titre">Better clothing for the planet</h1>
-        <p class="textpresentation section-titre">Select a vehicle from our catalog, they're all guaranteed to be good for the environment</p>
-        <a href="./index.html">
-            <button class="bouton ">shop all</button>
-        </a>
-
-        <img id="imagePricipale" src="../static/image/photo_voiture/5-face.jpg" width="312" height="350" alt="faceRoma"
-             class="image-contain">
-        <ul class="image-liste">
-            <img src="../static/image/capousse.png" width="150" height="150" alt="capousse"><img
-                src="../static/image/topgear.png" width="200" height="150" alt="capousse"><img
-                src="../static/image/brabus.png" width="200" height="150" alt=""><img src="../static/image/manhart.jpg"
-                                                                                      width="225" height="150" alt="capousse">
+        <ul>
+            <li>Marque : <span id="product-brand">{{ voiture.nomMarque }}</span></li>
+            <li>Modèle : <span id="product-model">{{ voiture.nomVoiture }}</span></li>
+            <li>Prix : <span title="{{ voiture.prixVoiture }}" id="product-price">{{ voiture.prixVoiture }}</span> €</li>
+            <li>Stock : <span id="product-stock">10</span> unités</li>
         </ul>
+
+        <h3>Descriptif :</h3>
+        <p id="product-description">
+            {{ voiture.description }}
+        </p>
+
+        <button onclick= "location.href='/panier/add?idVoiture={{ voiture.idVoiture }}'" id="add-to-cart-button">Ajouter au Panier</button>
     </div>
 </section>
+
+<script src="{{ url_for('static', filename = 'js/script.js') }}"></script>
+
+
+
+
+
+
+
+
+
+
 <!--
-  - #FOOTER
+  - #SERVICE
+-->
+
+<section class="section service">
+    <div class="boite">
+
+        <ul class="service-list">
+
+
+
+            <li class="service-item">
+                <div class="service-case">
+
+                    <div class="case-icon">
+                        <img src="../static/image/service-2.png" width="43" height="35" loading="lazy" alt="Service icon">
+                    </div>
+
+                    <div>
+                        <h3 class="h4 case-titre">Quick Payment</h3>
+
+                        <p class="case-text">
+                            100% secure payment
+                        </p>
+                    </div>
+
+                </div>
+            </li>
+
+            <li class="service-item">
+                <div class="service-case">
+
+                    <div class="case-icon">
+                        <img src="../static/image/service-3.png" width="40" height="40" loading="lazy" alt="Service icon">
+                    </div>
+
+                    <div>
+                        <h3 class="h4 case-titre">Free Returns</h3>
+
+                        <p class="case-text">
+                            Money back in 30 days
+                        </p>
+                    </div>
+
+                </div>
+            </li>
+
+            <li class="service-item">
+                <div class="service-case">
+
+                    <div class="case-icon">
+                        <img src="../static/image/service-4.png" width="40" height="40" loading="lazy" alt="Service icon">
+                    </div>
+
+                    <div>
+                        <h3 class="h4 case-titre">24/7 Support</h3>
+
+                        <p class="case-text">
+                            Get Quick Support
+                        </p>
+                    </div>
+
+                </div>
+            </li>
+
+        </ul>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+<!--
+- #FOOTER
 -->
 
 <footer class="footer">
@@ -158,7 +272,7 @@
             <div class="footer-marque">
 
                 <a href="#" class="logo">
-                    <img src="../static/image/miniLogo.jpeg" width="150" height="150" alt="logo">
+                    <img src="../static/image/miniLogo.jpeg" width="160" height="50" alt="logo">
                 </a>
 
                 <ul class="social-list">
@@ -204,8 +318,8 @@
                             <ion-icon name="location"></ion-icon>
 
                             <span class="footer-link-text">
-                  2751 S Parker Rd, Aurora, CO 80014, United States
-                </span>
+                      2751 S Parker Rd, Aurora, CO 80014, United States
+                    </span>
                         </address>
                     </li>
 
@@ -376,3 +490,5 @@
 </body>
 
 </html>
+
+

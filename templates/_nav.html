@@ -1,10 +1,15 @@
- <header class="header" data-header>
-    <div class="container">
+
+  <!-- 
+    - #navbar
+  -->
+
+  <header class="header" data-header>
+    <div class="boite">
 
       <div class="overlay" data-overlay></div>
 
-      <a href="#" class="logo">
-        <img src="{{ url_for('static', filename = 'images/grosLogo.png') }}" width="160" height="50" alt="Loge">
+      <a href="./acceuil" class="logo">
+        <img src="../static/image/miniLogo.jpeg" width="80" height="80" alt="Loge">
       </a>
 
       <button class="nav-open-btn" data-nav-open-btn aria-label="Open Menu">
@@ -17,14 +22,14 @@
           <ion-icon name="close-outline"></ion-icon>
         </button>
 
-        <a href="#" class="logo">
-          <img src="{{ url_for('static', filename = 'images/grosLogo.png') }}" width="190" height="50" alt="logo">
+        <a href="/" class="logo">
+          <img src="../static/image/miniLogo.jpeg" width="90" height="90" alt="logo">
         </a>
 
         <ul class="navbar-list">
 
           <li class="navbar-item">
-            <a href="#" class="navbar-link">Home</a>
+            <a href="/" class="navbar-link">Home</a>
           </li>
 
           <li class="navbar-item">
@@ -32,15 +37,7 @@
           </li>
 
           <li class="navbar-item">
-            <a href="#" class="navbar-link">Products</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="#" class="navbar-link">Shop</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="#" class="navbar-link">Blog</a>
+            <a href="./show_voitures" class="navbar-link">Products</a>
           </li>
 
           <li class="navbar-item">
@@ -59,7 +56,6 @@
               <span class="nav-action-text">Search</span>
             </button>
           </li>
-<!--menu burg -->
 
           <li>
             <a href="#" class="nav-action-btn">
@@ -68,7 +64,7 @@
               <span class="nav-action-text">Login / Register</span>
             </a>
           </li>
-<!--menu burg -->
+
 
           <li>
             <button class="nav-action-btn">
@@ -79,15 +75,13 @@
               <data class="nav-action-badge" value="5" aria-hidden="true">5</data>
             </button>
           </li>
-<!--menu burg -->
-          <li>
-            <button class="nav-action-btn">
-              <ion-icon name="bag-outline" aria-hidden="true"></ion-icon>
 
-              <data class="nav-action-text" value="28 000€">Basket: <strong>28 000€</strong></data>
-
+          <li onclick="location.href = './panier'">
+            <button class="nav-action-btn" onclick="location.href = './panier'">
+              <ion-icon name="bag-outline" aria-hidden="true" onclick="location.href = './panier'"></ion-icon>
               <data class="nav-action-badge" value="1" aria-hidden="true">4</data>
             </button>
+            </a>
           </li>
 
         </ul>
@@ -96,3 +90,8 @@
 
     </div>
   </header>
+
+
+  <!-- 
+        - navbar
+      -->

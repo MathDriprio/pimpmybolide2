@@ -1,78 +1,110 @@
-{% extends 'layout.html' %}
-{% block stylesheets %}
-<link rel="stylesheet" href="{{ url_for('static', filename = 'style/style.css') }}">
-<link rel="stylesheet" href="{{ url_for('static', filename = 'style/panier.css') }}" />
-<link
-        href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"
-        rel="stylesheet"
-/>
-{% endblock %}
-{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="../static/image/miniLogo.jpeg" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>PimpMyBolide</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style/panier.css') }}" />
+
+    <link
+            href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"
+            rel="stylesheet"
+    />
+</head>
+<body>
 <div class="se-pre-con"></div>
+<header>
+    <nav>
+        <ul>
+            <li class="primary-nav">
+                <img onclick="location.href = '/'" src="../static/image/grosLogo.png" alt="logo" width=100% height=10% />
+            </li>
+            <li class="secondary-nav">
+                <a href="lien a mettre">
+                    <i class="panierpanier"></i> Panier
+                </a>
+            </li>
+
+            <li class="secondary-nav">
+                <a href="encore un autre lien a mettre">A propos de nous</a>
+            </li>
+        </ul>
+    </nav>
+</header>
 <section>
     <h1>Panier</h1>
     <div class="row">
         <div class="column">
             <h1>Votre commande</h1>
+
             {% if panier | length >= 1 %}
-            {% for voiture in panier %}
-            <div class="cart-item" id="item">
-                <img class="presentation" src="/static/images/photo_voiture/{{ voiture["0"].idVoiture }}-face.jpg" alt="" />
-                <p class="nom">{{ voiture["0"].nomVoiture }}</p>
-                <p class="prix">{{ voiture["0"].prixVoiture }}</p>
-                <input class="quantite"
-                       type="number"
-                       name="quantity"
-                       id="nox-of-items"
-                       value="1"
-                       min="1"
-                       max="6"
-                       step="1"
-                />
-                <a href="#" class="supprimer">
-                    <img src="/static/images/supprimer.jpeg" width="80" height="80" alt="Loge">
-                </a>
-            </div>
-            {% endfor %}
+                {% for voiture in panier %}
+                    <div class="cart-item" id="item">
+                        <img class="presentation" src="/static/image/photo_voiture/{{ voiture.idVoiture }}-face.jpg" alt="" />
+                        <p class="nom">{{ voiture.nomVoiture }}</p>
+                        <p class="prix">{{ voiture.prixPanier }}</p>
+                        <input class="quantite"
+                               type="number"
+                               name="quantity"
+                               id="nox-of-items"
+                               value="1"
+                               min="1"
+                               max="6"
+                               step="1"
+                        />
+                        <a href="/panier/delete?id={{ voiture.idPanier }}" class="supprimer">
+                            <img src="/static/image/supprimer.jpeg" width="80" height="80" alt="Loge">
+                        </a>
+                    </div>
+                {% endfor %}
             {% else %}
-            <tr>
-                <th>
-                    Panier Vide
-                </th>
-            </tr>
+                <tr>
+                    <th>
+                        Panier Vide
+                    </th>
+                </tr>
             {% endif %}
             <hr />
-
         </div>
-
-
         <div class="column2">
             <h3>Total du panier</h3>
             <div class="row1">
                 <div class="col">
-                    <h5>prix commande :</h5>
-                    <h5>Frais </h5>
+                    <h5>prix commande : {{ total }}€</h5>
                 </div>
-                <div class="col">
-                    <p>beaucoup €</p>
-                    <div class="wrapper">
+            </div>
+
+            <div class="column2">
+                <h3>Total du panier</h3>
+                <div class="row1">
+                    <div class="col">
+                        <h5>prix commande :</h5>
+                        <h5>Frais </h5>
+                    </div>
+                    <div class="col">
+                        <p>{{ total }} €</p>
+                        <div class="wrapper">
                 <span>
                   <input type="radio" name="shipping" id="" checked />Livraison à votre adresse : 23 000€
                 </span>
-                        <span>
+                            <span>
                   <input type="radio" name="shipping" id="" />En magasin : 0€
                   <br />
                 </span>
 
+                        </div>
                     </div>
                 </div>
-            </div>
-            <h3>Total &nbsp; &nbsp; beaucoup +€€€</h3>
-            <div class="buttons">
-                <a class="button-checkout" href="validerPanier.html">Valider</a>
-                <a class="cancel" href="../HTML/men.html">Continue Shopping</a>
+                <h3>{{ total }}€</h3>
+                <div class="buttons">
+                    <a class="button-checkout" href="validerPanier">Valider</a>
+                    <a class="cancel" href="/show_voiture">Continue Shopping</a>
+                </div>
             </div>
         </div>
     </div>
 </section>
-{%endblock%}
+</body>
+</html>

@@ -19,7 +19,7 @@ def get_data(api):
 @app.route('/show_voiture')
 def show_voiture():
     clubs = get_data("http://node2.adky.net:25286/voiture")
-    return render_template('acceuil.html', clubs=clubs)
+    return render_template('show_voitures.html', clubs=clubs)
 
 @app.route('/page_detail')
 def page_detail():
@@ -35,4 +35,3 @@ def page_panier():
 
 if __name__ == '__main__':
     app.run()
-

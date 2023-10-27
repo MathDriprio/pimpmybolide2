@@ -7,10 +7,10 @@
     {% block title %}
         <title>layout</title>
     {% endblock %}
-
 {#    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">#}
+
     {% block stylesheets %}
-        <link rel="stylesheet" href="../static/style/style.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'style/style.css') }}">
     {% endblock %}
 </head>
 <body>
@@ -30,7 +30,7 @@
     <h2 style="color:blue">layout.html</h2>
 {% endblock %}
 
-{% include('_nav.html') %}
+{% include('_footer.html') %}
 
 {% block javascripts %}
 {% endblock %}
